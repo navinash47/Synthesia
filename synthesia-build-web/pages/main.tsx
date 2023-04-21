@@ -9,13 +9,14 @@ interface PianoKey {
 
 // Define an array of piano keys
 const pianoKeys: PianoKey[] = [
-  { note: "C", soundUrl: "https://example.com/c.mp3" },
-  { note: "D", soundUrl: "https://example.com/d.mp3" },
-  { note: "E", soundUrl: "https://example.com/e.mp3" },
-  { note: "F", soundUrl: "https://example.com/f.mp3" },
-  { note: "G", soundUrl: "https://example.com/g.mp3" },
-  { note: "A", soundUrl: "https://example.com/a.mp3" },
-  { note: "B", soundUrl: "https://example.com/b.mp3" },
+  { note: "C", soundUrl: "./resources/notes/key01.mp3" },
+  { note: "D", soundUrl: "./resources/notes/key02.mp3" },
+  { note: "E", soundUrl: "./resources/notes/key03.mp3" },
+  { note: "F", soundUrl: "./resources/notes/key04.mp3" },
+  { note: "G", soundUrl: "./resources/notes/key05.mp3" },
+  { note: "A", soundUrl: "./resources/notes/key06.mp3" },
+  { note: "B", soundUrl: "./resources/notes/key07.mp3" },
+
 ];
 
 export default function Piano() {
@@ -42,7 +43,8 @@ export default function Piano() {
             className={`piano-key ${pianoKey === currentKey ? "active" : ""}`}
             onClick={() => handleButtonClick(pianoKey)}
           >
-            {pianoKey.note}
+            {pianoKey.note} 
+            {/* how to use \n here? */}
           </button>
         ))}
       </div>
